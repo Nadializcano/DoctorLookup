@@ -1,28 +1,17 @@
-function DoctorLookup (side1,side2,side3)
-{
-  this.side1 = side1;
-  this.side2 = side2;
-  this.side3 = side3;
+class DoctorLookup {
+  getDoctorByMedicalIssue(medical issue) {
+    return new Promise(function(resolve, reject) {
+      let request = new XMLHttpRequest();
+      let url = `http://`;
+      request.onload = function() {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      }
+      request.open("GET", url, true);
+      request.send();
+    });
+  }
 }
-DoctorLookup.prototype.checkType = function(){
-  if((this.side1 < (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))){
-    return "not a triangle";
-  }
-
-};
-
-DoctorLookup.prototype.checkTriangle = function() {
-  var triangleType;
-  if (this.side1 === this.side2 && this.side1 === this.side3 && this.side2 === this.side3) {
-    triangleType = 'equilateral';
-  } else if (this.side1 + this.side2 <= this.side3 || this.side1 + this.side3 <= this.side2 || this.side2 + this.side3 <= this.side1) {
-    triangleType = "invalid";
-  } else if (this.side1 === this.side2 || this.side2 === this.side3 || this.side1 === this.side3) {
-    triangleType = 'isosceles';
-  } else {
-    triangleType = 'scalene';
-  }
-  return triangleType;
-};
-
-exports.doctorLookupModule = DoctorLookup;
