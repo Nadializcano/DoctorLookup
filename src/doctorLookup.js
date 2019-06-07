@@ -1,5 +1,5 @@
 export class DoctorLookup {
-  getDoctorByMedicalIssue(medical issue) {
+  getDoctor(name, medicalIssue) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       let url = `http://`;

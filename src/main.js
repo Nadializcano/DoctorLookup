@@ -1,6 +1,7 @@
 //BUSINESS LOGIC
 
 //UI LOGIC
+import {DoctorLookup} from '.doctorLookup.js';
 $(document).ready(function() {
   $('#doctorLocation').click(function() {
     let city = $('#location').val();
@@ -8,7 +9,7 @@ $(document).ready(function() {
 
 
     let doctorLookup = new DoctorLookup();  // create instance of WeatherService class
-    let promise = doctorLookup.getDoctorByMedicalIssue(medical issue);  // call the instance method and pass in user input
+    let promise = doctorLookup.getDoctor(name, medicalIssue);  // call the instance method and pass in user input
 
     promise.then(function(response) {
     let body = JSON.parse(response);
