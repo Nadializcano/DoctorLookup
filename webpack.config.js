@@ -19,7 +19,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Triangle',
+      title: 'Doctor Lookup',
       template: './src/index.html',
       inject: 'body'
 
