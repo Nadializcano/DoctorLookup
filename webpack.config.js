@@ -24,6 +24,14 @@ module.exports = {
       inject: 'body'
 
     })
+    const Dotenv = require('dotenv-webpack');
+
+module.exports = {
+  ...
+  plugins: [
+    ...
+    new Dotenv()
+  ],
   ],
   module: {
     rules: [{

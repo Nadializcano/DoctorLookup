@@ -1,4 +1,4 @@
-class DoctorLookup {
+export class DoctorLookup {
   getDoctorByMedicalIssue(medical issue) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
