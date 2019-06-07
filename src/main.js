@@ -4,8 +4,8 @@
 import {DoctorLookup} from '.doctorLookup.js';
 $(document).ready(function() {
   $('#doctorLocation').click(function() {
-    let city = $('#location').val();
-    $('#location').val("");
+    let medicalIssue = $('#medicalIssue').val();
+    $('#name').val("");
 
 
     let doctorLookup = new DoctorLookup();  // create instance of WeatherService class
