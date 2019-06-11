@@ -1,8 +1,8 @@
 {
-  "name": "DoctorLookup",
+  "name": "doctor-lookup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open",
@@ -12,16 +12,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "file-loader": "^4.0.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "webpack": "4.19.1"
+  },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.10",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^4.18.2",
-    "eslint-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.0.6",
+    "eslint-loader": "^2.1.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "jasmine": "^3.1.0",
     "jasmine-core": "^2.99.0",
     "karma": "^2.0.0",
@@ -34,14 +39,7 @@
     "karma-webpack": "^2.0.13",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "4.19.1",
     "webpack-cli": "^2.0.9",
     "webpack-dev-server": "^3.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1",
-    "karma-coverage": "^1.1.2",
-    "popper.js": "^1.15.0"
   }
 }

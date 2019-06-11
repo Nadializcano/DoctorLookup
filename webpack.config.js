@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
   entry: './src/main.js',
@@ -19,47 +21,39 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Doctor Lookup',
+      title: '',
       template: './src/index.html',
       inject: 'body'
-
-    })
-    const Dotenv = require('dotenv-webpack');
-
-module.exports = {
-  ...
-  plugins: [
-    ...
-    new Dotenv()
-  ],
+    }),
+    new Dotenv(),
   ],
   module: {
     rules: [{
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
-        loader: "eslint-loader"
-      },
-      {
-        test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
-        loader: "babel-loader",
-        options: {
-          presets: ['es2015']
-        }
-      }
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
+    },
+
+    {
+      test: /\.js$/,
+      exclude: [
+        /node_modules/,
+        /spec/
+      ],
+      loader: "eslint-loader"
+    },
+    {
+      test: /\.html$/,
+      use: [ "html-loader" ],
+    },
+    {
+      test: /\.(gif|png|jpe?g|svg)$/i,
+      use: [
+        'file-loader',
+      ],
+    },
     ]
   }
 };
