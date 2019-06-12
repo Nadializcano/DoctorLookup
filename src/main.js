@@ -24,7 +24,7 @@ $(document).ready(function() {
 
       for(let i= 0; i<body.data.length; i++)
       {
-        $('.showDoctor').append("<h2>"+body.data[i].profile.first_name +" "+ body.data[i].profile.last_name+"</h2>");
+        $('.showDoctor').append("<h3>This are the Doctors from your search</h3>" + "<h3>Dr."+" " +body.data[i].profile.first_name +" "+ body.data[i].profile.last_name+"</h3>" + "<h4>Address:</h4>" + "<p>" + body.data[i].practices[0].visit_address.street + "," + " " + body.data[i].practices[0].visit_address.city + "," + " " + body.data[i].practices[0].visit_address.zip +"</p>" + "<h4>Website:</h4>" + "<p>" + body.data[i].practices[0].website +"</p>");
       }
 }
  else {
