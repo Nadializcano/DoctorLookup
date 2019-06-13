@@ -20,8 +20,11 @@ $(document).ready(function() {
     let body = JSON.parse(response);
 
 
-    if(body.data.length>0)
+    if(body.data.length==0)
     {
+      $('.showDoctor').text('No Doctors found for your search');
+    } else {
+
       $('.showDoctor').text('');
 
       for(let i= 0; i<body.data.length; i++)

@@ -25,7 +25,8 @@ body{
     color : #fff;
 }
 .contact-section{
-  padding-top: 40px;
+  padding-top: 55px;
+  margin-left: 200px;
 }
 .contact-section .col-md-6{
   width: 20%;
@@ -36,12 +37,13 @@ body{
 }
 
 .form-group{
-  margin-top: 10px;
+  margin-left: 2px;
 }
 label{
   font-size: 1.7em;
   line-height: 1em;
   font-weight: normal;
+  margin-left: 45px;
 }
 
 .name{
@@ -49,6 +51,7 @@ label{
   height: 35px;
   width: 170px;
   font-size: 1.5em;
+  margin-left: 10px;
 }
 
 .medicalIssue{
@@ -56,10 +59,12 @@ label{
   height: 35px;
   width: 170px;
   font-size: 1.5em;
+  margin-left: 16px;
 }
 
 .showDoctor{
   margin-left: 155px;
+  font-size: 1.7em;
 }
 
 .form-control{
@@ -79,4 +84,8 @@ textarea.form-control {
   background-color: transparent;
   color: #fff;
 
+}
+
+#doctorLocation{
+ margin-right: 375px;
 }
